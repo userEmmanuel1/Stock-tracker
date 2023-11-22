@@ -24,7 +24,6 @@ api_key = "71959a3173904d4cb215fe33857b2665"
 #Basic information about the stock
 def get_stock_price(ticker_symbol,api):
     url=f"https://api.twelvedata.com/price?symbol={ticker}&apikey={api}"
-    url2=f"https://api.twelvedata.com/quote?symbol={ticker}&apikey={api}"
     response =requests.get(url).json()
     price = response['price']
     print("$" + price + " per share for " + ticker_symbol)
