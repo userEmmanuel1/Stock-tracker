@@ -10,7 +10,7 @@ smtp_server = "smtp.gmail.com"
 email_from= "ecueva003@gmail.com"
 email_to= "ecueva003@gmail.com"
 
-pw=""
+pw="ihvv iluz gmrc vcqh"
         
 simple_email_context = ssl.create_default_context()
 #Stock tracker 
@@ -23,7 +23,7 @@ api_key = "71959a3173904d4cb215fe33857b2665"
 
 #Basic information about the stock
 def get_stock_price(ticker_symbol,api):
-    url=f"https://api.twelvedata.com/price?symbol={ticker}&apikey={api}"
+    url=f"https://api.twelvedata.com/price?symbol={ ticker}&apikey={api}"
     url2=f"https://api.twelvedata.com/quote?symbol={ticker}&apikey={api}"
     response =requests.get(url).json()
     price = response['price']
@@ -46,6 +46,17 @@ def get_stock_price(ticker_symbol,api):
             print (f"Sending email to {email_to}")
             TIE_server.sendmail(email_from, email_to, msg)
             print(f"Sent email to {email_to}:")
+
+
+            import requests
+            resp = requests.post('https://textbelt.com/text', {
+            'phone': '+13237173041',
+            'heading': 'STFU',
+            'message': f'Sell the stock {ticker}',
+            'key': 'cd2595248c0ac46913b132b3ff6f335fa996cd95BAfjSt35FbB3Nnp0X7oxtIJlE',
+            })
+            print(resp.json())
+
 
         except Exception as e:
             print(f"Dumbass failed lmao{e}")
