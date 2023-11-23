@@ -10,7 +10,7 @@ smtp_server = "smtp.gmail.com"
 email_from= "ecueva003@gmail.com"
 email_to= "ecueva003@gmail.com"
 
-pw="ihvv iluz gmrc vcqh"
+pw=""
         
 simple_email_context = ssl.create_default_context()
 #Stock tracker 
